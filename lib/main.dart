@@ -70,22 +70,26 @@ class _BinaryConverterState extends State<BinaryConverter> {
         ),
         body: Column(
             children: <Widget>[
-              TextField(
-                controller: _textFieldController,
-                keyboardType: TextInputType.number,
-                decoration: new InputDecoration(hintText: 'Type a binary'),
-                inputFormatters: [BinaryTextInputFormatter()],
-                style: _biggerFont,
-                onChanged: (String value) async {
-                  setState(() {
-                    if (value.isNotEmpty) {
-                      final decimalValue = _binaryToDecimal(value);1
-                      _decimal = 'Decimal value is $decimalValue';
-                    } else {
-                      _decimal = 'Please input binary value';
-                    }
-                  });
-                },
+              Container(
+                child: TextField(
+                  controller: _textFieldController,
+                  keyboardType: TextInputType.number,
+                  decoration: new InputDecoration(hintText: 'Type a binary'),
+                  inputFormatters: [BinaryTextInputFormatter()],
+                  maxLength: 8,
+                  style: _biggerFont,
+                  onChanged: (String value) async {
+                    setState(() {
+                      if (value.isNotEmpty) {
+                        final decimalValue = _binaryToDecimal(value);
+                        _decimal = 'Decimal value is $decimalValue';
+                      } else {
+                        _decimal = 'Please input binary value';
+                      }
+                    });
+                  },
+                ),
+                margin: EdgeInsets.only(top: 10, left: 10, right: 10,)
               ),
               Container(
                 child: Text(_decimal, style: _biggerFont),
