@@ -2,7 +2,9 @@
 
 Source Idea: [https://github.com/florinpop17/app-ideas](https://github.com/florinpop17/app-ideas)
 
+
 **Tier:** 1-Beginner
+
 
 Binary is the number system all digital computers are based on.
 Therefore it's important for developers to understand binary, or base 2,
@@ -30,6 +32,10 @@ constraints:
 ## Bonus features
 
 -   [ ] User can enter a variable number of binary digits
+
+## Demo image
+
+![demo image](/readme_images/demo.png)
 
 ## Useful links and resources
 
